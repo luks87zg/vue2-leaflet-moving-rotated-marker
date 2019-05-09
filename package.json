@@ -1,0 +1,36 @@
+{
+  "name": "vue2-leaflet-moving-rotated-marker",
+  "version": "0.0.1",
+  "description": "moving rotated marker plugin extension for vue2-leaflet package",
+  "main": "dist/Vue2LeafletMovingRotadedMarker.js",
+  "scripts": {
+    "build": "vue build Vue2LeafletMovingRotatedMarker.vue --prod --lib --config build.config.js",
+    "example": "vue build example.vue"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/luks87zg/vue2-leaflet-moving-rotated-marker.git"
+  },
+  "keywords": [
+    "vue2",
+    "leaflet",
+    "movingmarker",
+    "rotatedmarker"
+  ],
+  "author": "luks87zg",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LouisMazel/vue2-leaflet-moving-rotated-marker/issues"
+  },
+  "homepage": "https://github.com/LouisMazel/vue2-leaflet-moving-rotated-marker#readme",
+  "dependencies": {
+    "leaflet": "^1.4.0",
+    "leaflet-moving-rotated-marker": "^0.0.1",
+    "vue2-leaflet": "^2.1.1"
+  },
+  "devDependencies": {
+    "babel-preset-env": "^1.6.0",
+    "vue-cli": "~2.8.2",
+    "webpack-node-externals": "^1.5.4"
+  }
+}
