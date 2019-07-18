@@ -83,6 +83,13 @@
         beforeDestroy () {
             this.parentContainer.removeLayer(this)
         },
+        watch: {
+            rotationAngle: {
+                handler: function () {
+                    this.options.rotationAngle = this.rotationAngle
+                }
+            }
+        },
         methods: {
             setDraggable (newVal, oldVal) {
                 if (this.mapObject.dragging) {
