@@ -76,9 +76,12 @@
             })
             L.DomEvent.on(this.mapObject, this.$listeners)
             propsBinder(this, this.mapObject, props)
-            this.ready = true
             this.parentContainer = findRealParent(this.$parent)
             this.parentContainer.addLayer(this, !this.visible)
+            this.ready = true
+            this.$nextTick(() => {
+                this.$emit('ready', this.mapObject)
+            })
         },
         beforeDestroy () {
             this.parentContainer.removeLayer(this)
