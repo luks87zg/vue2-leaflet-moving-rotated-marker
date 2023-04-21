@@ -1,6 +1,6 @@
 {
   "name": "vue2-leaflet-moving-rotated-marker",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "moving rotated marker plugin extension for vue2-leaflet package",
   "main": "dist/Vue2LeafletMovingRotatedMarker.js",
   "scripts": {
