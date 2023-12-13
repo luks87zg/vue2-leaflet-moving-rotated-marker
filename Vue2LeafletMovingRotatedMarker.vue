@@ -76,9 +76,16 @@
             })
             L.DomEvent.on(this.mapObject, this.$listeners)
             propsBinder(this, this.mapObject, props)
-            this.ready = true
             this.parentContainer = findRealParent(this.$parent)
+            // Check if has cluster marker as parent and override parent container to skip clustering
+            if (this.$parent.$vnode.componentOptions.tag.includes("-marker-cluster")) {
+                this.parentContainer = this.parentContainer.parentContainer;
+            }
             this.parentContainer.addLayer(this, !this.visible)
+            this.ready = true
+            this.$nextTick(() => {
+                this.$emit('ready', this.mapObject)
+            })
         },
         beforeDestroy () {
             this.parentContainer.removeLayer(this)
